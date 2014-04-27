@@ -46,6 +46,10 @@ add_executable(${PROJECT_NAME}/cost_learner src/nodes/cost_learner.cpp)
 set_target_properties(${PROJECT_NAME}/cost_learner PROPERTIES OUTPUT_NAME "cost_learner")
 target_link_libraries(${PROJECT_NAME}/cost_learner ${PROJECT_NAME})
 
+add_executable(${PROJECT_NAME}/observation src/nodes/observation.cpp)
+set_target_properties(${PROJECT_NAME}/observation PROPERTIES OUTPUT_NAME "observation")
+target_link_libraries(${PROJECT_NAME}/observation ${PROJECT_NAME})
+
 # Install the plugin and the plugin description
 install (DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
